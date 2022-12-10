@@ -5,4 +5,5 @@ namespace: dev-qr-code
 bases:
   - namespace.yaml
   - ../../base
+  - ingress.yaml
 
