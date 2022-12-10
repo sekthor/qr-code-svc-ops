@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qr-code-service
+spec:
+  selector:
+    matchLabels:
+      app: qr-code-service
+  template:
+    metadata:
+      labels:
+        app: qr-code-service
+    spec:
+      containers:
+      - name: qr-code-service
+        image: sekthor/qr-code-svc:0.0.1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
